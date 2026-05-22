@@ -1,0 +1,1 @@
+window.LUXBASE_WEB3FORMS_KEY = "526e4adc-cb29-44a3-97ce-eae708f9ef44";

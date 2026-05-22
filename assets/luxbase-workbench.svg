@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1100" viewBox="0 0 1800 1100" role="img" aria-labelledby="title desc">
+  <title id="title">Luxbase digital services workspace</title>
+  <desc id="desc">An abstract studio workspace with interface panels, color samples, support signals, and development elements.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#15201c"/>
+      <stop offset=".42" stop-color="#21362e"/>
+      <stop offset="1" stop-color="#0d1217"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7f3ea"/>
+      <stop offset="1" stop-color="#d8dfd0"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#233932"/>
+      <stop offset="1" stop-color="#10181d"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="34" stdDeviation="34" flood-color="#000" flood-opacity=".38"/>
+    </filter>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0v48" fill="none" stroke="#ffffff" stroke-opacity=".075" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1800" height="1100" fill="url(#bg)"/>
+  <rect width="1800" height="1100" fill="url(#grid)"/>
+  <path d="M0 780c214-93 391-92 529 2s286 127 444 98 299-95 424-58 259 82 403 14v264H0z" fill="#e4b04d" opacity=".2"/>
+  <path d="M0 861c243-102 429-87 560 44s308 147 532 47 405-95 708 16v132H0z" fill="#5fa786" opacity=".24"/>
+
+  <g filter="url(#shadow)" transform="translate(750 198)">
+    <rect x="0" y="0" width="760" height="520" rx="28" fill="url(#screen)"/>
+    <rect x="42" y="44" width="676" height="410" rx="18" fill="#16231f"/>
+    <rect x="74" y="82" width="232" height="28" rx="14" fill="#e6b85a"/>
+    <rect x="74" y="139" width="382" height="16" rx="8" fill="#d7e3d3" opacity=".85"/>
+    <rect x="74" y="177" width="312" height="16" rx="8" fill="#d7e3d3" opacity=".5"/>
+    <rect x="74" y="244" width="180" height="108" rx="16" fill="#5fa786"/>
+    <rect x="282" y="244" width="180" height="108" rx="16" fill="#e4b04d"/>
+    <rect x="490" y="244" width="154" height="108" rx="16" fill="#f0efe7"/>
+    <path d="M92 407h546" stroke="#d7e3d3" stroke-opacity=".34" stroke-width="14" stroke-linecap="round"/>
+    <circle cx="380" cy="486" r="11" fill="#f0efe7"/>
+  </g>
+
+  <g filter="url(#shadow)" transform="translate(230 278) rotate(-7)">
+    <rect x="0" y="0" width="480" height="610" rx="30" fill="url(#panel)"/>
+    <rect x="42" y="54" width="164" height="18" rx="9" fill="#15201c"/>
+    <rect x="42" y="105" width="375" height="72" rx="18" fill="#223b32"/>
+    <rect x="42" y="214" width="180" height="180" rx="22" fill="#5fa786"/>
+    <rect x="242" y="214" width="175" height="180" rx="22" fill="#e4b04d"/>
+    <rect x="42" y="430" width="375" height="23" rx="12" fill="#15201c" opacity=".76"/>
+    <rect x="42" y="482" width="286" height="23" rx="12" fill="#15201c" opacity=".42"/>
+    <rect x="42" y="534" width="216" height="23" rx="12" fill="#15201c" opacity=".3"/>
+  </g>
+
+  <g transform="translate(1120 736)" filter="url(#shadow)">
+    <rect x="0" y="0" width="350" height="210" rx="26" fill="#f0efe7"/>
+    <circle cx="68" cy="70" r="27" fill="#5fa786"/>
+    <path d="M126 62h150M126 104h106M52 150h246" stroke="#15201c" stroke-opacity=".6" stroke-width="18" stroke-linecap="round"/>
+  </g>
+</svg>
