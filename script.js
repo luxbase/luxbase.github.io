@@ -1,4 +1,34 @@
 (function () {
+  const header = document.querySelector(".site-header");
+  if (header) {
+    const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    const toggle = header.querySelector(".nav-toggle");
+    const nav = header.querySelector("#primary-nav");
+    if (toggle && nav) {
+      const setOpen = (open) => {
+        header.classList.toggle("nav-open", open);
+        toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      };
+      toggle.addEventListener("click", () => setOpen(!header.classList.contains("nav-open")));
+      nav.querySelectorAll("a").forEach((link) =>
+        link.addEventListener("click", () => setOpen(false))
+      );
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") setOpen(false);
+      });
+      document.addEventListener("click", (event) => {
+        if (header.classList.contains("nav-open") && !header.contains(event.target)) {
+          setOpen(false);
+        }
+      });
+    }
+  }
+})();
+
+(function () {
   const form = document.querySelector("#contact-form");
   const status = document.querySelector("#form-status");
 

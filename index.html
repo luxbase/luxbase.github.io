@@ -12,6 +12,9 @@
     <meta property="og:url" content="https://luxbase.github.io/">
     <meta property="og:image" content="https://luxbase.github.io/assets/luxbase-workbench.svg">
     <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap">
     <link rel="stylesheet" href="styles.css">
     <script src="web3forms-config.js" defer></script>
     <script src="script.js" defer></script>
@@ -22,12 +25,15 @@
         <span class="brand-mark" aria-hidden="true">L</span>
         <span>Luxbase</span>
       </a>
-      <nav>
+      <nav id="primary-nav">
         <a href="#clients">Clients</a>
         <a href="#services">Services</a>
         <a href="#process">Process</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="primary-nav" aria-expanded="false">
+        <span class="nav-toggle-bars" aria-hidden="true"></span>
+      </button>
     </header>
 
     <main>

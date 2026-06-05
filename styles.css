@@ -18,15 +18,20 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 84px;
 }
 
 body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-optical-sizing: auto;
   line-height: 1.5;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 main,
@@ -52,6 +57,69 @@ a {
   padding: 18px clamp(18px, 4vw, 56px);
   color: #fffaf0;
   background: linear-gradient(to bottom, rgba(13, 18, 23, 0.72), rgba(13, 18, 23, 0));
+  transition: background-color 220ms ease, box-shadow 220ms ease, padding 220ms ease;
+}
+
+.site-header.scrolled {
+  padding-block: 12px;
+  background: rgba(11, 15, 19, 0.82);
+  backdrop-filter: saturate(140%) blur(12px);
+  -webkit-backdrop-filter: saturate(140%) blur(12px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 12px 30px rgba(8, 12, 16, 0.28);
+}
+
+.nav-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: inherit;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-toggle-bars,
+.nav-toggle-bars::before,
+.nav-toggle-bars::after {
+  content: "";
+  display: block;
+  width: 18px;
+  height: 2px;
+  border-radius: 2px;
+  background: currentColor;
+  transition: transform 180ms ease, opacity 180ms ease;
+}
+
+.nav-toggle-bars {
+  position: relative;
+}
+
+.nav-toggle-bars::before {
+  position: absolute;
+  left: 0;
+  transform: translateY(-6px);
+}
+
+.nav-toggle-bars::after {
+  position: absolute;
+  left: 0;
+  transform: translateY(6px);
+}
+
+.site-header.nav-open .nav-toggle-bars {
+  background: transparent;
+}
+
+.site-header.nav-open .nav-toggle-bars::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.site-header.nav-open .nav-toggle-bars::after {
+  transform: translateY(0) rotate(-45deg);
 }
 
 .brand,
@@ -141,7 +209,8 @@ h2,
 h3 {
   margin: 0;
   line-height: 1.02;
-  letter-spacing: 0;
+  letter-spacing: -0.022em;
+  text-wrap: balance;
 }
 
 h1 {
@@ -265,14 +334,16 @@ h3 {
   gap: 22px;
   padding: 22px 24px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   background: #fffaf0;
-  transition: border-color 160ms ease, transform 160ms ease;
+  box-shadow: 0 1px 2px rgba(21, 32, 28, 0.04);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
 }
 
 .client-row:hover {
   border-color: rgba(95, 167, 134, 0.72);
   transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(21, 32, 28, 0.1);
 }
 
 .client-row span:first-child {
@@ -315,8 +386,16 @@ h3 {
   justify-content: space-between;
   padding: 26px;
   border: 1px solid var(--line);
-  border-radius: 8px;
+  border-radius: 12px;
   background: #fffaf0;
+  box-shadow: 0 1px 2px rgba(21, 32, 28, 0.04);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.service-card:hover {
+  border-color: rgba(95, 167, 134, 0.55);
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(21, 32, 28, 0.09);
 }
 
 .service-icon {
@@ -481,12 +560,49 @@ textarea:focus-visible {
 
 @media (max-width: 820px) {
   .site-header {
-    position: absolute;
-    align-items: flex-start;
+    position: fixed;
+    align-items: center;
+  }
+
+  .nav-toggle {
+    display: inline-flex;
   }
 
   nav {
-    display: none;
+    display: flex;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: clamp(18px, 4vw, 56px);
+    right: clamp(18px, 4vw, 56px);
+    flex-direction: column;
+    gap: 4px;
+    padding: 10px;
+    border-radius: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(11, 15, 19, 0.94);
+    backdrop-filter: saturate(140%) blur(14px);
+    -webkit-backdrop-filter: saturate(140%) blur(14px);
+    box-shadow: 0 18px 44px rgba(8, 12, 16, 0.4);
+    color: #fffaf0;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 180ms ease, transform 180ms ease;
+  }
+
+  nav a {
+    padding: 13px 14px;
+    border-radius: 9px;
+  }
+
+  nav a:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .site-header.nav-open nav {
+    opacity: 1;
+    transform: none;
+    pointer-events: auto;
   }
 
   .hero {
