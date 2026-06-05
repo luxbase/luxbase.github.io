@@ -15,6 +15,17 @@
     <meta property="og:image:height" content="630">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://luxbase.github.io/assets/og-cover.png">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Luxbase",
+        "url": "https://luxbase.github.io/",
+        "logo": "https://luxbase.github.io/assets/og-cover.png",
+        "description": "Independent studio for web development, branding, launch support, and ongoing technical care for growing brands.",
+        "sameAs": ["https://github.com/luxbase"]
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap">
@@ -50,8 +61,9 @@
           </p>
           <div class="hero-actions" aria-label="Primary actions">
             <a class="button primary" href="#contact">Start a Project</a>
-            <a class="button secondary" href="#services">View Services</a>
+            <a class="button secondary" href="#work">View Work</a>
           </div>
+          <p class="hero-note">Free 20-min scoping call · Replies within 1 business day</p>
         </div>
       </section>
 
@@ -68,37 +80,42 @@
         </div>
         <div class="client-list">
           <a class="client-row" href="/northstone/">
-            <span>
+            <img class="client-thumb" src="assets/work/northstone.jpg" alt="NorthStone website preview" loading="lazy" width="200" height="125">
+            <span class="client-text">
               <strong>NorthStone</strong>
-              <small>Hosted client page</small>
+              <small>Architecture &amp; permits — marketing site</small>
             </span>
             <span class="client-arrow" aria-hidden="true">View</span>
           </a>
           <a class="client-row" href="/dsl/">
-            <span>
+            <img class="client-thumb" src="assets/work/dsl.jpg" alt="Daniel Saldivar Landscaping website preview" loading="lazy" width="200" height="125">
+            <span class="client-text">
               <strong>Daniel Saldivar Landscaping</strong>
-              <small>Hosted client page</small>
+              <small>Landscaping company — lead-gen site</small>
             </span>
             <span class="client-arrow" aria-hidden="true">View</span>
           </a>
           <a class="client-row" href="/luna-qr/">
-            <span>
+            <img class="client-thumb" src="assets/work/luna-qr.jpg" alt="Luna QR website preview" loading="lazy" width="200" height="125">
+            <span class="client-text">
               <strong>Luna QR</strong>
               <small>Privacy-first QR code generator</small>
             </span>
             <span class="client-arrow" aria-hidden="true">View</span>
           </a>
           <a class="client-row" href="https://luxbase.github.io/Aither/login.html">
-            <span>
+            <img class="client-thumb" src="assets/work/aither.jpg" alt="Aither website preview" loading="lazy" width="200" height="125">
+            <span class="client-text">
               <strong>Aither</strong>
               <small>QR-to-video guide &amp; digital signage tool</small>
             </span>
             <span class="client-arrow" aria-hidden="true">View</span>
           </a>
           <a class="client-row" href="https://cuadernito-loans.vercel.app/">
-            <span>
+            <img class="client-thumb" src="assets/work/cuadernito.jpg" alt="Cuadernito website preview" loading="lazy" width="200" height="125">
+            <span class="client-text">
               <strong>Cuadernito</strong>
-              <small>Manage clients, loans, payments, invoices, and collections — all in one place.</small>
+              <small>Loans &amp; client-management SaaS</small>
             </span>
             <span class="client-arrow" aria-hidden="true">View</span>
           </a>
@@ -154,6 +171,7 @@
         <div>
           <p class="eyebrow">Work With Us</p>
           <h2>Need a homepage, service site, brand refresh, or steady technical support?</h2>
+          <p class="contact-note">Currently taking new projects · Replies within 1 business day · Free scoping call, no commitment.</p>
         </div>
         <form class="contact-form" id="contact-form">
           <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
@@ -165,11 +183,34 @@
             <span>Email</span>
             <input type="email" name="email" autocomplete="email" required>
           </label>
+          <div class="field-row">
+            <label>
+              <span>Budget</span>
+              <select name="budget" required>
+                <option value="" disabled selected>Select range</option>
+                <option>Under $1,000</option>
+                <option>$1,000–$5,000</option>
+                <option>$5,000–$15,000</option>
+                <option>$15,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+            <label>
+              <span>Timeline</span>
+              <select name="timeline" required>
+                <option value="" disabled selected>Select timeline</option>
+                <option>ASAP</option>
+                <option>2–4 weeks</option>
+                <option>1–2 months</option>
+                <option>Flexible</option>
+              </select>
+            </label>
+          </div>
           <label>
             <span>Project</span>
             <textarea name="message" rows="5" required></textarea>
           </label>
-          <button class="button primary light" type="submit">Send Message</button>
+          <button class="button primary light" type="submit">Request a Quote</button>
           <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
         </form>
       </section>
