@@ -1,168 +1,250 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Luxbase services for web development, branding, support, and digital operations. Powered by the TinyDarkForge Team.">
+    <meta name="description"
+        content="Luxbase is an independent studio for web development, branding, launch support, and ongoing technical care for growing brands.">
     <title>Luxbase | Web Development, Branding, and Support</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Luxbase | Web Development, Branding, and Support">
+    <meta property="og:description"
+        content="Independent studio for web development, branding, launch support, and ongoing technical care for growing brands.">
+    <meta property="og:url" content="https://luxbase.github.io/">
+    <meta property="og:image" content="https://luxbase.github.io/assets/og-cover.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://luxbase.github.io/assets/og-cover.png">
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Luxbase",
+            "url": "https://luxbase.github.io/",
+            "logo": "https://luxbase.github.io/assets/og-cover.png",
+            "description": "Independent studio for web development, branding, launch support, and ongoing technical care for growing brands.",
+            "sameAs": ["https://github.com/luxbase"]
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400..900&display=swap">
     <link rel="stylesheet" href="styles.css">
     <script src="web3forms-config.js" defer></script>
     <script src="script.js" defer></script>
-  </head>
-  <body>
+</head>
+
+<body>
     <header class="site-header" aria-label="Primary navigation">
-      <a class="brand" href="/" aria-label="Luxbase home">
-        <span class="brand-mark" aria-hidden="true">L</span>
-        <span>Luxbase</span>
-      </a>
-      <nav>
-        <a href="#clients">Clients</a>
-        <a href="#services">Services</a>
-        <a href="#process">Process</a>
-        <a href="#contact">Contact</a>
-      </nav>
+        <a class="brand" href="/" aria-label="Luxbase home">
+            <span class="brand-mark" aria-hidden="true">L</span>
+            <span>Luxbase</span>
+        </a>
+        <nav id="primary-nav">
+            <a href="#work">Work</a>
+            <a href="#services">Services</a>
+            <a href="#process">Process</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button class="nav-toggle" type="button" aria-label="Toggle menu" aria-controls="primary-nav"
+            aria-expanded="false">
+            <span class="nav-toggle-bars" aria-hidden="true"></span>
+        </button>
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero-media" aria-hidden="true"></div>
-        <div class="hero-content">
-          <p class="eyebrow">Powered by the TinyDarkForge Team</p>
-          <h1>Luxbase builds sharp digital foundations for growing brands.</h1>
-          <p class="hero-copy">
-            Web development, identity systems, launch support, and ongoing technical care for teams that need their online presence to work cleanly from day one.
-          </p>
-          <div class="hero-actions" aria-label="Primary actions">
-            <a class="button primary" href="#contact">Start a Project</a>
-            <a class="button secondary" href="#services">View Services</a>
-          </div>
-        </div>
-      </section>
+        <section class="hero">
+            <div class="hero-media" aria-hidden="true"></div>
+            <div class="hero-content">
+                <p class="eyebrow">Independent web &amp; brand studio</p>
+                <h1>Luxbase builds sharp digital foundations for growing brands.</h1>
+                <p class="hero-copy">
+                    Web development, identity systems, launch support, and ongoing technical care for teams that need
+                    their online presence to work cleanly from day one.
+                </p>
+                <div class="hero-actions" aria-label="Primary actions">
+                    <a class="button primary" href="#contact">Start a Project</a>
+                    <a class="button secondary" href="#work">View Work</a>
+                </div>
+                <p class="hero-note">Free 20-min scoping call · Replies within 1 business day</p>
+            </div>
+        </section>
 
-      <section class="intro" aria-label="Service summary">
-        <p>
-          We design, build, and maintain practical web systems: fast sites, clear brands, support workflows, and the day-to-day improvements that keep them useful.
-        </p>
-      </section>
+        <section class="intro" aria-label="Service summary">
+            <p>
+                We design, build, and maintain practical web systems: fast sites, clear brands, support workflows, and
+                the day-to-day improvements that keep them useful.
+            </p>
+        </section>
 
-      <section class="section clients" id="clients">
-        <div class="section-heading">
-          <p class="eyebrow">Clients</p>
-          <h2>Selected pages and active projects.</h2>
-        </div>
-        <div class="client-list">
-          <a class="client-row" href="/northstone/">
-            <span>
-              <strong>NorthStone</strong>
-              <small>Hosted client page</small>
-            </span>
-            <span class="client-arrow" aria-hidden="true">View</span>
-          </a>
-          <a class="client-row" href="/dsl/">
-            <span>
-              <strong>Daniel Saldivar Landscaping</strong>
-              <small>Hosted client page</small>
-            </span>
-            <span class="client-arrow" aria-hidden="true">View</span>
-          </a>
-          <a class="client-row" href="/luna-qr/">
-            <span>
-              <strong>Luna QR</strong>
-              <small>Privacy-first QR code generator</small>
-            </span>
-            <span class="client-arrow" aria-hidden="true">View</span>
-          </a>
-          <a class="client-row" href="https://memio.pages.dev/">
-            <span>
-              <strong>Luna QR</strong>
-              <small>Your moment,forever.</small>
-            </span>
-            <span class="client-arrow" aria-hidden="true">View</span>
-          </a>
-          <a class="client-row" href="https://cuadernito-loans.vercel.app/">
-            <span>
-              <strong>Cuadernito</strong>
-              <small>Manage clients, loans, payments, invoices, and collections — all in one place.</small>
-            </span>
-            <span class="client-arrow" aria-hidden="true">View</span>
-          </a>
-        </div>
-      </section>
+        <section class="section clients" id="work">
+            <div class="section-heading">
+                <p class="eyebrow">Selected Work</p>
+                <h2>Client pages and active projects.</h2>
+            </div>
+            <div class="client-list">
+                <a class="client-row" href="/northstone/">
+                    <img class="client-thumb" src="assets/work/northstone.jpg" alt="NorthStone website preview"
+                        loading="lazy" width="200" height="125">
+                    <span class="client-text">
+                        <strong>NorthStone</strong>
+                        <small>Architecture &amp; permits — marketing site</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+                <a class="client-row" href="/dsl/">
+                    <img class="client-thumb" src="assets/work/dsl.jpg"
+                        alt="Daniel Saldivar Landscaping website preview" loading="lazy" width="200" height="125">
+                    <span class="client-text">
+                        <strong>Daniel Saldivar Landscaping</strong>
+                        <small>Landscaping company — lead-gen site</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+                <a class="client-row" href="https://memio.pages.dev/">
+                    <img class="client-thumb" src="assets/work/memio.jpg"
+                        alt="Daniel Saldivar Landscaping website preview" loading="lazy" width="200" height="125">
+                    <span class="client-text">
+                        <strong>Daniel Saldivar Landscaping</strong>
+                        <small>Landscaping company — lead-gen site</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+                <a class="client-row" href="/luna-qr/">
+                    <img class="client-thumb" src="assets/work/luna-qr.jpg" alt="Luna QR website preview" loading="lazy"
+                        width="200" height="125">
+                    <span class="client-text">
+                        <strong>Luna QR</strong>
+                        <small>Privacy-first QR code generator</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+                <a class="client-row" href="https://luxbase.github.io/Aither/login.html">
+                    <img class="client-thumb" src="assets/work/aither.jpg" alt="Aither website preview" loading="lazy"
+                        width="200" height="125">
+                    <span class="client-text">
+                        <strong>Aither</strong>
+                        <small>QR-to-video guide &amp; digital signage tool</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+                <a class="client-row" href="https://cuadernito-loans.vercel.app/">
+                    <img class="client-thumb" src="assets/work/cuadernito.jpg" alt="Cuadernito website preview"
+                        loading="lazy" width="200" height="125">
+                    <span class="client-text">
+                        <strong>Cuadernito</strong>
+                        <small>Loans &amp; client-management SaaS</small>
+                    </span>
+                    <span class="client-arrow" aria-hidden="true">View</span>
+                </a>
+            </div>
+        </section>
 
-      <section class="section" id="services">
-        <div class="section-heading">
-          <p class="eyebrow">Services</p>
-          <h2>Everything needed to launch and keep moving.</h2>
-        </div>
-        <div class="service-grid">
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">01</span>
-            <h3>Web Development</h3>
-            <p>Responsive websites, landing pages, static GitHub Pages builds, CMS-ready structures, performance cleanup, and integrations.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">02</span>
-            <h3>Branding</h3>
-            <p>Logo direction, color systems, typography, messaging, launch assets, and practical identity kits for consistent presentation.</p>
-          </article>
-          <article class="service-card">
-            <span class="service-icon" aria-hidden="true">03</span>
-            <h3>Support</h3>
-            <p>Site updates, issue triage, accessibility passes, domain and deployment help, documentation, and lightweight operations support.</p>
-          </article>
-        </div>
-      </section>
+        <section class="section" id="services">
+            <div class="section-heading">
+                <p class="eyebrow">Services</p>
+                <h2>Everything needed to launch and keep moving.</h2>
+            </div>
+            <div class="service-grid">
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">01</span>
+                    <h3>Web Development</h3>
+                    <p>Responsive websites, landing pages, static GitHub Pages builds, CMS-ready structures, performance
+                        cleanup, and integrations.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">02</span>
+                    <h3>Branding</h3>
+                    <p>Logo direction, color systems, typography, messaging, launch assets, and practical identity kits
+                        for consistent presentation.</p>
+                </article>
+                <article class="service-card">
+                    <span class="service-icon" aria-hidden="true">03</span>
+                    <h3>Support</h3>
+                    <p>Site updates, issue triage, accessibility passes, domain and deployment help, documentation, and
+                        lightweight operations support.</p>
+                </article>
+            </div>
+        </section>
 
-      <section class="split-section" id="process">
-        <div>
-          <p class="eyebrow">Approach</p>
-          <h2>Clear scope, careful build, steady follow-through.</h2>
-        </div>
-        <div class="steps" aria-label="Project process">
-          <div class="step">
-            <strong>Map</strong>
-            <span>Define goals, content, audience, and the smallest strong launch target.</span>
-          </div>
-          <div class="step">
-            <strong>Make</strong>
-            <span>Design and build the site or brand system with production details handled early.</span>
-          </div>
-          <div class="step">
-            <strong>Maintain</strong>
-            <span>Keep the work current with updates, support, fixes, and measured improvements.</span>
-          </div>
-        </div>
-      </section>
+        <section class="split-section" id="process">
+            <div>
+                <p class="eyebrow">Approach</p>
+                <h2>Clear scope, careful build, steady follow-through.</h2>
+            </div>
+            <div class="steps" aria-label="Project process">
+                <div class="step">
+                    <strong>Map</strong>
+                    <span>Define goals, content, audience, and the smallest strong launch target.</span>
+                </div>
+                <div class="step">
+                    <strong>Make</strong>
+                    <span>Design and build the site or brand system with production details handled early.</span>
+                </div>
+                <div class="step">
+                    <strong>Maintain</strong>
+                    <span>Keep the work current with updates, support, fixes, and measured improvements.</span>
+                </div>
+            </div>
+        </section>
 
-      <section class="contact-band" id="contact">
-        <div>
-          <p class="eyebrow">Work With Us</p>
-          <h2>Need a homepage, service site, brand refresh, or steady technical support?</h2>
-        </div>
-        <form class="contact-form" id="contact-form">
-          <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
-          <label>
-            <span>Name</span>
-            <input type="text" name="name" autocomplete="name" required>
-          </label>
-          <label>
-            <span>Email</span>
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>
-            <span>Project</span>
-            <textarea name="message" rows="5" required></textarea>
-          </label>
-          <button class="button primary light" type="submit">Send Message</button>
-          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-        </form>
-      </section>
+        <section class="contact-band" id="contact">
+            <div>
+                <p class="eyebrow">Work With Us</p>
+                <h2>Need a homepage, service site, brand refresh, or steady technical support?</h2>
+                <p class="contact-note">Currently taking new projects · Replies within 1 business day · Free scoping
+                    call, no commitment.</p>
+            </div>
+            <form class="contact-form" id="contact-form">
+                <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
+                <label>
+                    <span>Name</span>
+                    <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label>
+                    <span>Email</span>
+                    <input type="email" name="email" autocomplete="email" required>
+                </label>
+                <div class="field-row">
+                    <label>
+                        <span>Budget</span>
+                        <select name="budget" required>
+                            <option value="" disabled selected>Select range</option>
+                            <option>Under $1,000</option>
+                            <option>$1,000–$5,000</option>
+                            <option>$5,000–$15,000</option>
+                            <option>$15,000+</option>
+                            <option>Not sure yet</option>
+                        </select>
+                    </label>
+                    <label>
+                        <span>Timeline</span>
+                        <select name="timeline" required>
+                            <option value="" disabled selected>Select timeline</option>
+                            <option>ASAP</option>
+                            <option>2–4 weeks</option>
+                            <option>1–2 months</option>
+                            <option>Flexible</option>
+                        </select>
+                    </label>
+                </div>
+                <label>
+                    <span>Project</span>
+                    <textarea name="message" rows="5" required></textarea>
+                </label>
+                <button class="button primary light" type="submit">Request a Quote</button>
+                <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+            </form>
+        </section>
     </main>
 
     <footer class="site-footer">
-      <span>Luxbase</span>
-      <span>Powered by the TinyDarkForge Team</span>
+        <span>Luxbase</span>
+        <span>© 2026 Luxbase · Independent web studio</span>
     </footer>
-  </body>
+</body>
+
 </html>
