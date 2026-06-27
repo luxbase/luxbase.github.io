@@ -1,6 +1,6 @@
 # luxbase.github.io
 
-Static homepage for Luxbase services.
+Static homepage for LuxbaseDev services.
 
 ## Contact Form
 

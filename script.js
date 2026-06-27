@@ -50,8 +50,8 @@
 
     const formData = new FormData(form);
     formData.append("access_key", accessKey);
-    formData.append("subject", "New Luxbase website inquiry");
-    formData.append("from_name", "Luxbase Website");
+    formData.append("subject", "New LuxbaseDev website inquiry");
+    formData.append("from_name", "LuxbaseDev Website");
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
